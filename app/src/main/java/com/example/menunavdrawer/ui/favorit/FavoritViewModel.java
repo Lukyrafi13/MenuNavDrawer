@@ -1,16 +1,16 @@
-package com.example.menunavdrawer.ui.gallery;
+package com.example.menunavdrawer.ui.favorit;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class FavoritViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public FavoritViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("This is favorit fragment");
     }
 
     public LiveData<String> getText() {

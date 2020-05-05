@@ -1,4 +1,4 @@
-package com.example.menunavdrawer.ui.gallery;
+package com.example.menunavdrawer.ui.favorit;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.menunavdrawer.R;
 
-public class GalleryFragment extends Fragment {
+public class FavoritFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
+    private FavoritViewModel favoritViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        favoritViewModel =
+                ViewModelProviders.of(this).get(FavoritViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_favorit, container, false);
+        final TextView textView = root.findViewById(R.id.text_favorit);
+        favoritViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
